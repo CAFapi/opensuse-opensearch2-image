@@ -33,6 +33,8 @@ import org.apache.http.client.CredentialsProvider;
 import org.apache.http.conn.ssl.NoopHostnameVerifier;
 import org.apache.http.impl.client.BasicCredentialsProvider;
 import org.apache.http.ssl.SSLContextBuilder;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestRule;
@@ -52,14 +54,12 @@ import org.opensearch.client.opensearch.indices.CreateIndexResponse;
 import org.opensearch.client.opensearch.indices.IndexSettings;
 import org.opensearch.client.transport.OpenSearchTransport;
 import org.opensearch.client.transport.rest_client.RestClientTransport;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public final class ContainerIT {
 
     private static final int CONNECT_TIMEOUT = 60000;
     private static final int SOCKET_TIMEOUT = 60000;
-    private static final Logger LOGGER = LoggerFactory.getLogger(ContainerIT.class);
+    private static final Logger LOGGER = LogManager.getLogger(ContainerIT.class);
 
     @Rule
     public TestRule watcher = new TestWatcher() {
