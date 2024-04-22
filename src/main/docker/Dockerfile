@@ -18,15 +18,18 @@
 ARG DOCKER_HUB_PUBLIC=docker.io
 
 # Reference the official OpenSearch 2 image
-FROM @DOCKER_HUB_PUBLIC@/opensearchproject/opensearch:2.5.0 AS os2-image
+FROM @DOCKER_HUB_PUBLIC@/opensearchproject/opensearch:2.13.0 AS os2-image
 
 # Remove unused plugins
 RUN /usr/share/opensearch/bin/opensearch-plugin remove opensearch-performance-analyzer --purge && \
     /usr/share/opensearch/bin/opensearch-plugin remove opensearch-reports-scheduler --purge && \
     /usr/share/opensearch/bin/opensearch-plugin remove opensearch-cross-cluster-replication && \
+    /usr/share/opensearch/bin/opensearch-plugin remove opensearch-custom-codecs && \
+    /usr/share/opensearch/bin/opensearch-plugin remove opensearch-flow-framework && \
     /usr/share/opensearch/bin/opensearch-plugin remove opensearch-alerting && \
     /usr/share/opensearch/bin/opensearch-plugin remove opensearch-anomaly-detection && \
     /usr/share/opensearch/bin/opensearch-plugin remove opensearch-geospatial && \
+    /usr/share/opensearch/bin/opensearch-plugin remove opensearch-skills && \
     /usr/share/opensearch/bin/opensearch-plugin remove opensearch-ml && \
     /usr/share/opensearch/bin/opensearch-plugin remove opensearch-neural-search && \
     /usr/share/opensearch/bin/opensearch-plugin remove opensearch-notifications --purge && \
