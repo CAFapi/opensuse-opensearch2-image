@@ -72,6 +72,7 @@
         <dockerProjectVersion>${dockerVersionSeperator}${project.version}</dockerProjectVersion>
         <DOCKER_HUB_PUBLIC>${dockerHubPublic}</DOCKER_HUB_PUBLIC>
         <enforceBannedDependencies>false</enforceBannedDependencies>
+        <projectDockerRegistry>opensuse-opensearch2-image-${project.version}.project-registries.local</projectDockerRegistry>
     </properties>
 
     <dependencyManagement>
@@ -244,7 +245,35 @@
     </dependencies>
 
     <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.github.cafapi.plugins.docker.versions</groupId>
+                    <artifactId>docker-versions-maven-plugin</artifactId>
+                    <version>1.0.0-SNAPSHOT</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
         <plugins>
+            <plugin>
+                <groupId>com.github.cafapi.plugins.docker.versions</groupId>
+                <artifactId>docker-versions-maven-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <imageManagement>
+                        <image>
+                            <repository>${dockerHubPublic}/cafapi/opensuse-jre17</repository>
+                            <tag>4.0.0</tag>
+                            <digest>sha256:c0065ce7db226f864099ffd52371ebcf580c944a772f24fc0cb69ccacd9e6059</digest>
+                        </image>
+                        <image>
+                            <repository>${dockerHubPublic}/opensearchproject/opensearch</repository>
+                            <tag>2.13.0</tag>
+                            <digest>sha256:2e954ff0e8c9d0f4868b4818150b3aecc92fbb0cc4a24d00dace38ada227291d</digest>
+                        </image>
+                    </imageManagement>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>io.fabric8</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
