@@ -67,9 +67,7 @@ COPY --from=os2-image --chown=1000:0 /usr/share/opensearch/ /usr/share/opensearc
 
 # Configure logging
 COPY log4j2.properties /usr/share/opensearch/config
-COPY /maven/log4j-*.jar /usr/share/opensearch/lib/
-COPY /maven/caf-logging-*.jar /usr/share/opensearch/lib/
-COPY /maven/util-process-identifier-*.jar /usr/share/opensearch/lib/
+COPY /maven/*.jar /usr/share/opensearch/lib/
 
 # Install ICU Analysis plugin
 RUN JAVA_HOME=${JRE_HOME} OPENSEARCH_JAVA_OPTS="$(echo ${https_proxy} | sed -E 's/^.*:\/\/(.*):([0-9]*).*/-Dhttps.proxyHost=\1 -Dhttps.proxyPort=\2/')" \
