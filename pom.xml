@@ -178,8 +178,8 @@
                         </image>
                         <image>
                             <repository>${dockerHubPublic}/opensearchproject/opensearch</repository>
-                            <tag>2.13.0</tag>
-                            <digest>sha256:2e954ff0e8c9d0f4868b4818150b3aecc92fbb0cc4a24d00dace38ada227291d</digest>
+                            <tag>2.14.0</tag>
+                            <digest>sha256:96af4ace999e20f3f74b1675e501d7dba46f2e7c185cfcffd4626898b00e6743</digest>
                         </image>
                     </imageManagement>
                 </configuration>
