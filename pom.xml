@@ -125,9 +125,15 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.10.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.10.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -175,7 +181,7 @@
                         <image>
                             <repository>${dockerHubPublic}/opensearchproject/opensearch</repository>
                             <tag>2.14.0</tag>
-                            <digest>sha256:96af4ace999e20f3f74b1675e501d7dba46f2e7c185cfcffd4626898b00e6743</digest>
+                            <digest>sha256:466a49f379bb8889af29d615475e69b7b990898c6987d28470cd7105df9046ff</digest>
                         </image>
                     </imageManagement>
                 </configuration>
