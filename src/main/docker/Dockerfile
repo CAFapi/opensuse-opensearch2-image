@@ -48,7 +48,7 @@ RUN rm -rf /usr/share/opensearch/jdk \
 FROM @projectDockerRegistry@/cafapi/oraclelinux-jre21 AS builder
 
 RUN microdnf -y --refresh && \
-    microdnf -y upgrade
+    microdnf -y update
 
 # Install packages
 RUN microdnf -y install which hostname netcat-openbsd unzip wget
@@ -86,7 +86,7 @@ RUN chgrp 0 /usr/share/opensearch/opensearch-docker-entrypoint.sh && \
 FROM @projectDockerRegistry@/cafapi/oraclelinux-jre21
 
 RUN microdnf -y --refresh && \
-    microdnf -y upgrade && \
+    microdnf -y update && \
     microdnf clean all
 
 COPY --from=os2-image /etc/pki/ca-trust /etc/pki/ca-trust
