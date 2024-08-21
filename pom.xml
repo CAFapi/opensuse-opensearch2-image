@@ -174,9 +174,9 @@
                     <projectDockerRegistry>opensuse-opensearch2-image-${project.version}.project-registries.local</projectDockerRegistry>
                     <imageManagement>
                         <image>
-                            <repository>${dockerHubPublic}/cafapi/opensuse-jre21</repository>
-                            <tag>4.1.1</tag>
-                            <digest>sha256:57531bc26fcdd52b74c343d772cf49b3b5b819b76d9b58935e47684742f671c4</digest>
+                            <targetRepository>cafapi/oraclelinux-jre21</targetRepository>
+                            <repository>${dockerHubPublic}/cafapi/prereleases</repository>
+                            <tag>oraclelinux-jre21-1.0.0-US952040-SNAPSHOT</tag>
                         </image>
                         <image>
                             <repository>${dockerHubPublic}/opensearchproject/opensearch</repository>
