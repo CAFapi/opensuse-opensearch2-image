@@ -85,8 +85,7 @@ RUN chgrp 0 /usr/share/opensearch/opensearch-docker-entrypoint.sh && \
 #
 FROM @projectDockerRegistry@/cafapi/oraclelinux-jre21
 
-RUN microdnf -y --refresh && \
-    microdnf -y update && \
+RUN microdnf -y --refresh update && \
     microdnf clean all
 
 COPY --from=os2-image /etc/pki/ca-trust /etc/pki/ca-trust
