@@ -47,12 +47,12 @@ RUN rm -rf /usr/share/opensearch/jdk \
 #
 FROM @projectDockerRegistry@/cafapi/oraclelinux-jre21 AS builder
 
-RUN zypper -n refresh && \
-    zypper -n update
+RUN microdnf -y --refresh && \
+    microdnf -y upgrade
 
 # Install packages
-RUN zypper -n install which hostname netcat-openbsd unzip wget
-RUN zypper -n clean --all
+RUN microdnf -y install which hostname netcat-openbsd unzip wget
+RUN microdnf clean all
 
 RUN mkdir -p /usr/share/opensearch
 # Create group, user and set access rights to the opensearch base dir
@@ -85,9 +85,9 @@ RUN chgrp 0 /usr/share/opensearch/opensearch-docker-entrypoint.sh && \
 #
 FROM @projectDockerRegistry@/cafapi/oraclelinux-jre21
 
-RUN zypper -n refresh && \
-    zypper -n update && \
-    zypper -n clean --all
+RUN microdnf -y --refresh && \
+    microdnf -y upgrade && \
+    microdnf clean all
 
 COPY --from=os2-image /etc/pki/ca-trust /etc/pki/ca-trust
 
