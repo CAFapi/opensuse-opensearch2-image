@@ -50,7 +50,7 @@ FROM @projectDockerRegistry@/cafapi/oraclelinux-jre21 AS builder
 RUN microdnf -y --refresh update
 
 # Install packages
-RUN microdnf -y install which hostname netcat-openbsd unzip wget
+RUN microdnf -y install which hostname unzip wget
 RUN microdnf clean all
 
 RUN mkdir -p /usr/share/opensearch
