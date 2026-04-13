@@ -180,7 +180,7 @@
                         </image>
                         <image>
                             <repository>${dockerHubPublic}/opensearchproject/opensearch</repository>
-                            <tag>2.14.0</tag>
+                            <tag>2.19.5</tag>
                         </image>
                     </imageManagement>
                 </configuration>
