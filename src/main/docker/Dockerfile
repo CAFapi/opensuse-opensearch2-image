@@ -23,6 +23,7 @@ RUN /usr/share/opensearch/bin/opensearch-plugin remove opensearch-performance-an
     /usr/share/opensearch/bin/opensearch-plugin remove opensearch-cross-cluster-replication && \
     /usr/share/opensearch/bin/opensearch-plugin remove opensearch-custom-codecs && \
     /usr/share/opensearch/bin/opensearch-plugin remove opensearch-flow-framework && \
+    /usr/share/opensearch/bin/opensearch-plugin remove opensearch-security-analytics && \
     /usr/share/opensearch/bin/opensearch-plugin remove opensearch-alerting && \
     /usr/share/opensearch/bin/opensearch-plugin remove opensearch-anomaly-detection && \
     /usr/share/opensearch/bin/opensearch-plugin remove opensearch-geospatial && \
@@ -35,8 +36,7 @@ RUN /usr/share/opensearch/bin/opensearch-plugin remove opensearch-performance-an
     /usr/share/opensearch/bin/opensearch-plugin remove opensearch-knn && \
     /usr/share/opensearch/bin/opensearch-plugin remove opensearch-sql && \
     /usr/share/opensearch/bin/opensearch-plugin remove opensearch-observability --purge && \
-    /usr/share/opensearch/bin/opensearch-plugin remove opensearch-security --purge && \
-    /usr/share/opensearch/bin/opensearch-plugin remove opensearch-security-analytics
+    /usr/share/opensearch/bin/opensearch-plugin remove opensearch-security --purge
 
 RUN rm -rf /usr/share/opensearch/jdk \
            /usr/share/opensearch/lib/log4j-* \

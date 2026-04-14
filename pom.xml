@@ -23,7 +23,7 @@
 
     <groupId>com.github.cafapi</groupId>
     <artifactId>opensuse-opensearch2-image</artifactId>
-    <version>3.1.4-SNAPSHOT</version>
+    <version>3.2.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>openSUSE OpenSearch2 image</name>
@@ -180,7 +180,7 @@
                         </image>
                         <image>
                             <repository>${dockerHubPublic}/opensearchproject/opensearch</repository>
-                            <tag>2.14.0</tag>
+                            <tag>2.19.5</tag>
                         </image>
                     </imageManagement>
                 </configuration>
