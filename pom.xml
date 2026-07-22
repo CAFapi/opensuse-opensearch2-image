@@ -23,7 +23,7 @@
 
     <groupId>com.github.cafapi</groupId>
     <artifactId>opensuse-opensearch2-image</artifactId>
-    <version>4.0.3-SNAPSHOT</version>
+    <version>4.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>openSUSE OpenSearch2 image</name>
@@ -174,9 +174,9 @@
                     <projectDockerRegistry>opensuse-opensearch2-image-${project.version}.project-registries.local</projectDockerRegistry>
                     <imageManagement>
                         <image>
-                            <repository>${dockerHubPublic}/cafapi/opensuse-jre21</repository>
+                            <repository>${dockerHubPublic}/cafapi/opensuse-jre25</repository>
                             <tag>7.0.2</tag>
-                            <digest>sha256:d1b8c3467a16cab3aa81e35a3db364f8d94f7d328b53f5aa8dd5b0059ea274b2</digest>
+                            <digest>sha256:1e8d869426d707df22efb3be3963c02117cb5484d6d8581a133b5448c02a630f</digest>
                         </image>
                         <image>
                             <repository>${dockerHubPublic}/opensearchproject/opensearch</repository>
