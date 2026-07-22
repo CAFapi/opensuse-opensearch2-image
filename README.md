@@ -1,6 +1,6 @@
 # openSUSE and OpenSearch 2 image
 
-This project uses the openSUSE Java 21 image [here](https://github.com/CAFapi/opensuse-base-images/tree/main/opensuse-java21-images) to build a pre-configured OpenSearch 2 Docker image.
+This project uses the openSUSE Java 25 image [here](https://github.com/CAFapi/opensuse-base-images/tree/main/opensuse-java25-images) to build a pre-configured OpenSearch 2 Docker image.
 
 It can be used as a base image for any projects that use OpenSearch.
 
