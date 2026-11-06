@@ -175,7 +175,7 @@
                     <imageManagement>
                         <image>
                             <repository>${dockerHubPublic}/cafapi/opensuse-jre21</repository>
-                            <tag>7.0.5</tag>
+                            <tag>7.0.6</tag>
                             <digest>sha256:6d6a5f8e191b9e5e1d83c8cf27246233572c0ff87e8d3bb3c7deebe28d283bdf</digest>
                         </image>
                         <image>
